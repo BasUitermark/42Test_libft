@@ -11,14 +11,18 @@ static int	locate_binary(void)
 	return (1);
 }
 
-// static void	read_input(char *argv1)
-// {
-// 	if (strstr(argv, "Mandatory"))
-// 		run_mandatory();
-// 	if (strstr(argv, "Bonus"));
-// 		run_
-// 	if 
-// }
+static void	read_input(char *argv1)
+{
+	if (strstr(argv1, "mandatory"))
+		run_mandatory();
+	if (strstr(argv1, "bonus"));
+		run_bonus();
+	if (strstr(argv1, "all"));
+	{
+		run_mandatory();
+		run_bonus();
+	}
+}
 
 int	main(int argc, char **argv)
 {
@@ -30,14 +34,6 @@ int	main(int argc, char **argv)
 		print_results(GREEN "libft.h found!" RESET);
 		print_results(GREEN "Makefile found!" RESET);
 	}
-	// read_input(argv[1]);
-	printf("Success!\n");
+	read_input(argv[1]);
 	}
 
-/**
- * Startup message
- * Check for argc
- * Locate binary
- * Check what test to run
- * 
- */
