@@ -1,0 +1,3 @@
+||====Welcome to 42Test_libft====||
+||=======Initiating tester=======||
+||==========Good luck!===========||

@@ -4,7 +4,6 @@ void	error(char *error_msg)
 {
 	if (errno)
 		perror("ERROR");
-	else
-		dprintf(STDERR_FILENO, "%s/n", error_msg);
+	dprintf(STDERR_FILENO, RED "%s\n" RESET, error_msg);
 	exit(EXIT_FAILURE);
 }

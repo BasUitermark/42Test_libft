@@ -5,9 +5,11 @@
 # include <errno.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <string.h>
 # include "def.h"
 
-int		main(void);
+int		main(int argc, char **argv);
 void	error(char *error_msg);
+void	print_results(char *msg);
 
 #endif
