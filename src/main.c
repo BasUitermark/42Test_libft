@@ -35,5 +35,5 @@ int	main(int argc, char **argv)
 		print_results(GREEN "Makefile found!" RESET);
 	}
 	read_input(argv[1]);
-	}
+}
 
