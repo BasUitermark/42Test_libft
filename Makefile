@@ -22,6 +22,7 @@ LIBFT			= ../libft
 #===============================================================================: Compile variables
 CC			= gcc
 # CFLAGS		= -Wall -Werror -Wextra
+MAKEFLAGS	= --no-print-directory
 RM			= rm -rf
 MKDIR		= mkdir -p objs
 HEADERS		= -I $(42TLIBFT)
@@ -29,11 +30,16 @@ HEADERS		= -I $(42TLIBFT)
 #===============================================================================: Sourcefiles
 SRCS		= $(addprefix src/, $(addsuffix .c, \
 			error \
-			print_results \
-			main))
+			main \
+			unit_tests \
+			run_single_function))
 
 #===============================================================================: Make commands
 all: libft message $(NAME)
+ifeq (run,$(firstword $(MAKECMDGOALS)))
+  RUN_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
+  $(eval $(RUN_ARGS):;@:)
+endif
 
 #===============================================================================: Main compile
 $(NAME): $(OBJS)
@@ -50,7 +56,7 @@ endif
 
 #===============================================================================: Executable run command
 run: all
-	@./$(NAME) $(ARG)
+	@./$(NAME) $(RUN_ARGS)
 
 #===============================================================================: Build messages
 message:
@@ -58,7 +64,7 @@ message:
 
 #===============================================================================: Libft Compile
 libft:
-	@$(MAKE) -C $(LIBFT)
+	@$(MAKE) -C $(LIBFT) $(MAKEFLAGS)
 
 #===============================================================================: Remove all object files
 clean:

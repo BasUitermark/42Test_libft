@@ -13,15 +13,17 @@ static int	locate_binary(void)
 
 static void	read_input(char *argv1)
 {
-	if (strstr(argv1, "mandatory"))
+	if (strcmp(argv1, "mandatory") == 0)
 		run_mandatory();
-	if (strstr(argv1, "bonus"));
-		run_bonus();
-	if (strstr(argv1, "all"));
+	// if (strcmp(argv1, "bonus") == 0)
+	// 	run_bonus();
+	if (strcmp(argv1, "all") == 0)
 	{
 		run_mandatory();
-		run_bonus();
+		// run_bonus();
 	}
+	else
+		run_single_function(argv1);
 }
 
 int	main(int argc, char **argv)
@@ -30,9 +32,9 @@ int	main(int argc, char **argv)
 		error("Please specify testing range!");
 	if (locate_binary())
 	{
-		print_results(GREEN "Libft folder found!" RESET);
-		print_results(GREEN "libft.h found!" RESET);
-		print_results(GREEN "Makefile found!" RESET);
+		printf(GREEN "Libft folder found!\n" RESET);
+		printf(GREEN "libft.h found!\n" RESET);
+		printf(GREEN "Makefile found!\n" RESET);
 	}
 	read_input(argv[1]);
 }
