@@ -31,6 +31,7 @@ HEADERS		= -I $(42TLIBFT)
 SRCS		= $(addprefix src/, $(addsuffix .c, \
 			error \
 			main \
+			validate \
 			unit_tests \
 			run_single_function))
 

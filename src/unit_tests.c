@@ -2,118 +2,95 @@
 
 void	isalpha_test(void)
 {
-	int	testnum;
+	int	test_num;
 
-	testnum = 1;
+	test_num = 1;
 	printf("\n//==================================//\n");
 	printf("//====      ft_isalpha test     ====//\n");
 	printf("//==================================//\n");
 	// #1
-	if (ft_isalpha('a') && isalpha('a'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-	else
-		printf(RED "%d. KO |" RESET, testnum++);
-
+	validate(ft_isalpha('a'), test_num++);
 	// #2
-	if (!ft_isalpha('a' - 1) && !isalpha('a' - 1))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-	else
-		printf(RED "%d. KO |" RESET, testnum++);
-
+	validate(!ft_isalpha('a' - 1), test_num++);
 	// #3
-	if (ft_isalpha('z') && isalpha('z'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-	else
-		printf(RED "%d. KO |" RESET, testnum++);
-
+	validate(ft_isalpha('z'), test_num++);
 	// #4
-	if (!ft_isalpha('z' + 1) && !isalpha('z' + 1))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-	else
-		printf(RED "%d. KO |" RESET, testnum++);
-
+	validate(!ft_isalpha('z' + 1), test_num++);
 	// #5
-	if (ft_isalpha('A') && isalpha('A'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-	else
-		printf(RED "%d. KO |" RESET, testnum++);
-
+	validate(ft_isalpha('A'), test_num++);
 	// #6
-	if (!ft_isalpha('A' - 1) && !isalpha('A' - 1))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-	else
-		printf(RED "%d. KO |" RESET, testnum++);
-
+	validate(!ft_isalpha('A' - 1), test_num++);
 	// #7
-	if (ft_isalpha('Z') && isalpha('Z'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-	else
-		printf(RED "%d. KO |" RESET, testnum++);
-
+	validate(ft_isalpha('Z'), test_num++);
 	// #8
-	if (!ft_isalpha('Z' + 1) && !isalpha('Z' + 1))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-	else
-		printf(RED "%d. KO |" RESET, testnum++);
-
+	validate(!ft_isalpha('Z' + 1), test_num++);
 	// #9
-	if (!ft_isalpha('0') && !isalpha('0'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-	else
-		printf(RED "%d. KO |" RESET, testnum++);
-
+	validate(!ft_isalpha('0'), test_num++);
 	// #10
-	if (!ft_isalpha('9') && !isalpha('9'))
-		printf(GREEN "%d. OK |\n" RESET, testnum++);
-	else
-		printf(RED "%d. KO |\n" RESET, testnum++);
-
+	validate(!ft_isalpha('9'), test_num++);
+	write(1, "\n", 1);
 }
 
 void	isdigit_test(void)
 {
-	int	testnum;
+	int	test_num;
 
-	testnum = 1;
+	test_num = 1;
 	printf("\n//==================================//\n");
 	printf("//====      ft_isdigit test     ====//\n");
 	printf("//==================================//\n");
 	// #1
-	if (ft_isdigit('0')&& isdigit('0'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-
+	validate(ft_isdigit('0'), test_num++);
 	// #2
-	if (!ft_isdigit('0' - 1) && !isdigit('0' - 1))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-
+	validate(!ft_isdigit('0' - 1), test_num++);
 	// #3
-	if (ft_isdigit('9')&& isdigit('9'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-
+	validate(ft_isdigit('9'), test_num++);
 	// #4
-	if (!ft_isdigit('9' + 1) && !isdigit('9' + 1))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-
+	validate(!ft_isdigit('9' + 1), test_num++);
 	// #5
-	if (!ft_isdigit('A') && !isdigit('A'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-
+	validate(!ft_isdigit('a'), test_num++);
 	// #6
-	if (!ft_isdigit('a') && !isdigit('a'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-
+	validate(!ft_isdigit('a' + 1), test_num++);
 	// #7
-	if (!ft_isdigit('Z') && !isdigit('Z'))
-		printf(GREEN "%d. OK |" RESET, testnum++);
-
+	validate(!ft_isdigit('z'), test_num++);
 	// #8
-	if (!ft_isdigit('z') && !isdigit('z' ))
-		printf(GREEN "%d. OK |" RESET, testnum++);
+	validate(!ft_isdigit('z' + 1), test_num++);
+	write(1, "\n", 1);
 }
 
 void	isalnum_test(void)
 {
-	error("UNDER CONSTRUCTION!\n");
+	int	test_num;
+
+	test_num = 1;
+	printf("\n//==================================//\n");
+	printf("//====      ft_isalnum test     ====//\n");
+	printf("//==================================//\n");
+	// #1
+	validate(ft_isalnum('a'), test_num++);
+	// #2
+	validate(!ft_isalnum('a' - 1), test_num++);
+	// #3
+	validate(ft_isalnum('z'), test_num++);
+	// #4
+	validate(!ft_isalnum('z' + 1), test_num++);
+	// #5
+	validate(ft_isalnum('A'), test_num++);
+	// #6
+	validate(!ft_isalnum('A' - 1), test_num++);
+	// #7
+	validate(ft_isalnum('Z'), test_num++);
+	// #8
+	validate(!ft_isalnum('Z' + 1), test_num++);
+	// #9
+	validate(ft_isdigit('0'), test_num++);
+	// #10
+	validate(!ft_isdigit('0' - 1), test_num++);
+	// #11
+	validate(ft_isdigit('9'), test_num++);
+	// #12
+	validate(!ft_isdigit('9' + 1), test_num++);
+	write(1, "\n", 1);
 }
 
 void	isascii_test(void)
@@ -176,7 +153,7 @@ void	run_mandatory(void)
 {
 	isalpha_test();
 	isdigit_test();
-	// isalnum_test();
+	isalnum_test();
 	// isascii_test();
 	// isprint_test();
 	// strlen_test();

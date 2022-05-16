@@ -12,6 +12,7 @@
 
 int		main(int argc, char **argv);
 void	error(char *error_msg);
+void	validate(bool correct, int test_num);
 void	run_mandatory(void);
 void	run_bonus(void);
 void	run_single_function(char *argv1);
