@@ -70,6 +70,6 @@ void	run_single_function(char *argv1)
 	// 	putendl_fd_test();
 	// if (strcmp(argv1, "putnbr_fd"))
 	// 	putnbr_fd_test();
-	else
-		error("No function detected");
+	// else
+	// 	error("No function detected");
 }

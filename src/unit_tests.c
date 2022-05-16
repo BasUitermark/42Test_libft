@@ -2,33 +2,113 @@
 
 void	isalpha_test(void)
 {
-	error("UNDER CONSTRUCTION!\n");
-	// int	test;
-	// int	testnum;
+	int	testnum;
 
-	// testnum = 1;
-	// printf("		%s		\n", "ft_isalpha test");
-	// for (test = 'a'; test <= 'z'; test++)
-	// {
-	// 	if (check(ft_isalpha(test), isalnum(test), 1))
-	// 		printf(GREEN "%d. OK" RESET, testnum);
-	// 	else
-	// 		printf(RED "%d. KO" RESET, testnum);
-	// 	testnum++;
-	// }
-	// for (test = 'A'; test <= 'Z'; test++)
-	// {
-	// 	if (memcmp(ft_isalpha(test), isalnum(test), 1))
-	// 		printf(GREEN "%d. OK" RESET, testnum);
-	// 	else
-	// 		printf(RED "%d. KO" RESET, testnum);
-	// 	testnum++;
-	// }
+	testnum = 1;
+	printf("\n//==================================//\n");
+	printf("//====      ft_isalpha test     ====//\n");
+	printf("//==================================//\n");
+	// #1
+	if (ft_isalpha('a') && isalpha('a'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+	else
+		printf(RED "%d. KO |" RESET, testnum++);
+
+	// #2
+	if (!ft_isalpha('a' - 1) && !isalpha('a' - 1))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+	else
+		printf(RED "%d. KO |" RESET, testnum++);
+
+	// #3
+	if (ft_isalpha('z') && isalpha('z'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+	else
+		printf(RED "%d. KO |" RESET, testnum++);
+
+	// #4
+	if (!ft_isalpha('z' + 1) && !isalpha('z' + 1))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+	else
+		printf(RED "%d. KO |" RESET, testnum++);
+
+	// #5
+	if (ft_isalpha('A') && isalpha('A'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+	else
+		printf(RED "%d. KO |" RESET, testnum++);
+
+	// #6
+	if (!ft_isalpha('A' - 1) && !isalpha('A' - 1))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+	else
+		printf(RED "%d. KO |" RESET, testnum++);
+
+	// #7
+	if (ft_isalpha('Z') && isalpha('Z'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+	else
+		printf(RED "%d. KO |" RESET, testnum++);
+
+	// #8
+	if (!ft_isalpha('Z' + 1) && !isalpha('Z' + 1))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+	else
+		printf(RED "%d. KO |" RESET, testnum++);
+
+	// #9
+	if (!ft_isalpha('0') && !isalpha('0'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+	else
+		printf(RED "%d. KO |" RESET, testnum++);
+
+	// #10
+	if (!ft_isalpha('9') && !isalpha('9'))
+		printf(GREEN "%d. OK |\n" RESET, testnum++);
+	else
+		printf(RED "%d. KO |\n" RESET, testnum++);
+
 }
 
 void	isdigit_test(void)
 {
-	error("UNDER CONSTRUCTION!\n");
+	int	testnum;
+
+	testnum = 1;
+	printf("\n//==================================//\n");
+	printf("//====      ft_isdigit test     ====//\n");
+	printf("//==================================//\n");
+	// #1
+	if (ft_isdigit('0')&& isdigit('0'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+
+	// #2
+	if (!ft_isdigit('0' - 1) && !isdigit('0' - 1))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+
+	// #3
+	if (ft_isdigit('9')&& isdigit('9'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+
+	// #4
+	if (!ft_isdigit('9' + 1) && !isdigit('9' + 1))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+
+	// #5
+	if (!ft_isdigit('A') && !isdigit('A'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+
+	// #6
+	if (!ft_isdigit('a') && !isdigit('a'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+
+	// #7
+	if (!ft_isdigit('Z') && !isdigit('Z'))
+		printf(GREEN "%d. OK |" RESET, testnum++);
+
+	// #8
+	if (!ft_isdigit('z') && !isdigit('z' ))
+		printf(GREEN "%d. OK |" RESET, testnum++);
 }
 
 void	isalnum_test(void)
@@ -96,18 +176,18 @@ void	run_mandatory(void)
 {
 	isalpha_test();
 	isdigit_test();
-	isalnum_test();
-	isascii_test();
-	isprint_test();
-	strlen_test();
-	memset_test();
-	bzero_test();
-	memcpy_test();
-	memmove_test();
-	strlcpy_test();
-	strlcat_test();
-	toupper_test();
-	tolower_test();
+	// isalnum_test();
+	// isascii_test();
+	// isprint_test();
+	// strlen_test();
+	// memset_test();
+	// bzero_test();
+	// memcpy_test();
+	// memmove_test();
+	// strlcpy_test();
+	// strlcat_test();
+	// toupper_test();
+	// tolower_test();
 	// strchr_test();
 	// strrchr_test();
 	// strncmp_test();
