@@ -5,9 +5,7 @@ void	isalpha_test(void)
 	int	test_num;
 
 	test_num = 1;
-	printf("\n//==================================//\n");
-	printf("//====      ft_isalpha test     ====//\n");
-	printf("//==================================//\n");
+	printf(BOLD MAGENTA"\n[	ft_isalpha	]\n"RESET);
 	// #1
 	validate(ft_isalpha('a'), test_num++);
 	// #2
@@ -28,7 +26,7 @@ void	isalpha_test(void)
 	validate(!ft_isalpha('0'), test_num++);
 	// #10
 	validate(!ft_isalpha('9'), test_num++);
-	write(1, "\n", 1);
+	printf("\n");
 }
 
 void	isdigit_test(void)
@@ -36,9 +34,7 @@ void	isdigit_test(void)
 	int	test_num;
 
 	test_num = 1;
-	printf("\n//==================================//\n");
-	printf("//====      ft_isdigit test     ====//\n");
-	printf("//==================================//\n");
+	printf(BOLD MAGENTA"\n[	ft_isdigit	]\n"RESET);
 	// #1
 	validate(ft_isdigit('0'), test_num++);
 	// #2
@@ -55,7 +51,7 @@ void	isdigit_test(void)
 	validate(!ft_isdigit('z'), test_num++);
 	// #8
 	validate(!ft_isdigit('z' + 1), test_num++);
-	write(1, "\n", 1);
+	printf("\n");
 }
 
 void	isalnum_test(void)
@@ -63,9 +59,8 @@ void	isalnum_test(void)
 	int	test_num;
 
 	test_num = 1;
-	printf("\n//==================================//\n");
-	printf("//====      ft_isalnum test     ====//\n");
-	printf("//==================================//\n");
+	printf(BOLD MAGENTA"\n[	ft_isalnum	]\n"RESET);
+
 	// #1
 	validate(ft_isalnum('a'), test_num++);
 	// #2
@@ -83,29 +78,63 @@ void	isalnum_test(void)
 	// #8
 	validate(!ft_isalnum('Z' + 1), test_num++);
 	// #9
-	validate(ft_isdigit('0'), test_num++);
+	validate(ft_isalnum('0'), test_num++);
 	// #10
-	validate(!ft_isdigit('0' - 1), test_num++);
+	validate(!ft_isalnum('0' - 1), test_num++);
 	// #11
-	validate(ft_isdigit('9'), test_num++);
+	validate(ft_isalnum('9'), test_num++);
 	// #12
-	validate(!ft_isdigit('9' + 1), test_num++);
-	write(1, "\n", 1);
+	validate(!ft_isalnum('9' + 1), test_num++);
+	printf("\n");
 }
 
 void	isascii_test(void)
 {
-	error("UNDER CONSTRUCTION!\n");
+	int	test_num;
+
+	test_num = 1;
+	printf(BOLD MAGENTA"\n[	ft_isascii	]\n"RESET);
+	// #1
+	validate(ft_isascii(0), test_num++);
+	// #2
+	validate(ft_isascii(127), test_num++);
+	// #3
+	validate(!ft_isascii(0 - 1), test_num++);
+	// #4
+	validate(!ft_isascii(127 + 1), test_num++);
+	printf("\n");
 }
 
 void	isprint_test(void)
 {
-	error("UNDER CONSTRUCTION!\n");
+	int	test_num;
+
+	test_num = 1;
+	printf(BOLD MAGENTA"\n[	ft_isprint	]\n"RESET);
+	// #1
+	validate(ft_isprint(32), test_num++);
+	// #2
+	validate(ft_isprint(126), test_num++);
+	// #3
+	validate(!ft_isprint(32 - 1), test_num++);
+	// #4
+	validate(!ft_isprint(126 + 1), test_num++);
+	printf("\n");
 }
 
 void	strlen_test(void)
 {
-	error("UNDER CONSTRUCTION!\n");
+	int	test_num;
+
+	test_num = 1;
+	printf(BOLD MAGENTA"\n[	ft_strlen	]\n"RESET);
+	// #1
+	validate(ft_strlen("55555") == 5, test_num++);
+	// #2
+	validate(ft_strlen("") == 0, test_num++);
+	// #3
+	validate(ft_strlen("\n\n\f\r\t") == 5, test_num++);
+	printf("\n");
 }
 
 void	memset_test(void)
@@ -154,9 +183,9 @@ void	run_mandatory(void)
 	isalpha_test();
 	isdigit_test();
 	isalnum_test();
-	// isascii_test();
-	// isprint_test();
-	// strlen_test();
+	isascii_test();
+	isprint_test();
+	strlen_test();
 	// memset_test();
 	// bzero_test();
 	// memcpy_test();
