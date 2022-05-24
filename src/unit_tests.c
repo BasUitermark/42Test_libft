@@ -1,5 +1,9 @@
 #include "test42_libft.h"
 
+/**
+ * Unit tests for all the individual functions of libft
+*/
+
 void	isalpha_test(void)
 {
 	int	test_num;
@@ -175,44 +179,4 @@ void	toupper_test(void)
 void	tolower_test(void)
 {
 	error("UNDER CONSTRUCTION!\n");
-}
-
-
-void	run_mandatory(void)
-{
-	isalpha_test();
-	isdigit_test();
-	isalnum_test();
-	isascii_test();
-	isprint_test();
-	strlen_test();
-	// memset_test();
-	// bzero_test();
-	// memcpy_test();
-	// memmove_test();
-	// strlcpy_test();
-	// strlcat_test();
-	// toupper_test();
-	// tolower_test();
-	// strchr_test();
-	// strrchr_test();
-	// strncmp_test();
-	// memchr_test();
-	// memcmp_test();
-	// strnstr_test();
-	// atoi_test();
-	// calloc_test();
-	// strdup_test();
-	// substr_test();
-	// strjoin_test();
-	// strtrim_test();
-	// split_test();
-	// itoa_test();
-	// strmapi_test();
-	// striteri_test();
-	// putchar_fd_test();
-	// putstr_fd_test();
-	// putendl_fd_test();
-	// putnbr_fd_test();
-	exit(EXIT_SUCCESS);
 }
