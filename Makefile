@@ -33,7 +33,7 @@ SRCS		= $(addprefix src/, $(addsuffix .c, \
 			main \
 			validate \
 			unit_tests \
-			run_single_function))
+			run_testing_range))
 
 #===============================================================================: Make commands
 all: libft message $(NAME)
