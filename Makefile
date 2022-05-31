@@ -36,7 +36,7 @@ SRCS		= $(addprefix src/, $(addsuffix .c, \
 			run_testing_range))
 
 #===============================================================================: Make commands
-all: libft message $(NAME)
+all: libft message norm $(NAME)
 ifeq (run,$(firstword $(MAKECMDGOALS)))
   RUN_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
   $(eval $(RUN_ARGS):;@:)
@@ -66,6 +66,11 @@ message:
 #===============================================================================: Libft Compile
 libft:
 	@$(MAKE) -C $(LIBFT) $(MAKEFLAGS)
+
+#===============================================================================: Norminette check
+norm:
+	@-norminette ../libft >> normcheck.txt
+	@printf "$(GREEN)⏳Checking your norm: $(MAGENTA)$(notdir $<)$(GREEN)\r\e[35C[OK]\n$(RESET)"
 
 #===============================================================================: Remove all object files
 clean:
