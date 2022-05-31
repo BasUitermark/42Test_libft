@@ -30,6 +30,8 @@ void	isalpha_test(void)
 	validate(!ft_isalpha('0'), test_num++);
 	// #10
 	validate(!ft_isalpha('9'), test_num++);
+	// #11
+	validate(!ft_isalpha('\t'), test_num++);
 	printf("\n");
 }
 
@@ -55,6 +57,8 @@ void	isdigit_test(void)
 	validate(!ft_isdigit('z'), test_num++);
 	// #8
 	validate(!ft_isdigit('z' + 1), test_num++);
+	// #9
+	validate(!ft_isdigit('\t'), test_num++);
 	printf("\n");
 }
 
@@ -89,6 +93,8 @@ void	isalnum_test(void)
 	validate(ft_isalnum('9'), test_num++);
 	// #12
 	validate(!ft_isalnum('9' + 1), test_num++);
+	// #13
+	validate(!ft_isalnum('\t'), test_num++);
 	printf("\n");
 }
 
@@ -101,10 +107,12 @@ void	isascii_test(void)
 	// #1
 	validate(ft_isascii(0), test_num++);
 	// #2
-	validate(ft_isascii(127), test_num++);
+	validate(ft_isascii(64), test_num++);
 	// #3
-	validate(!ft_isascii(0 - 1), test_num++);
+	validate(ft_isascii(127), test_num++);
 	// #4
+	validate(!ft_isascii(0 - 1), test_num++);
+	// #5
 	validate(!ft_isascii(127 + 1), test_num++);
 	printf("\n");
 }
@@ -138,6 +146,8 @@ void	strlen_test(void)
 	validate(ft_strlen("") == 0, test_num++);
 	// #3
 	validate(ft_strlen("\n\n\f\r\t") == 5, test_num++);
+	// #4
+	validate(ft_strlen("") == 0, test_num++);
 	printf("\n");
 }
 
