@@ -1,7 +1,7 @@
 #include "test42_libft.h"
 
 /**
- * Prints an error message to stderr and exits the program
+ * Prints an error message to stderr and exits the program   
  * 
  * @param error_msg The error message to print.
  */

@@ -33,6 +33,7 @@ SRCS		= $(addprefix src/, $(addsuffix .c, \
 			main \
 			validate \
 			unit_tests \
+			filecheck \
 			run_testing_range))
 
 #===============================================================================: Make commands

@@ -16,6 +16,7 @@ void	validate(bool correct, int test_num);
 void	run_mandatory(void);
 void	run_bonus(void);
 void	run_single_function(char *argv1);
+void	filecheck(int argc);
 
 void	isalpha_test(void);
 void	isdigit_test(void);
@@ -27,7 +28,7 @@ void	memset_test(void);
 void	bzero_test(void);
 void	memcpy_test(void);
 void	memmove_test(void);
-void	strlcpy(void);
+void	strlcpy_test(void);
 void	strlcat_test(void);
 void	toupper_test(void);
 void	tolower_test(void);
