@@ -27,7 +27,7 @@ void	memset_test(void);
 void	bzero_test(void);
 void	memcpy_test(void);
 void	memmove_test(void);
-void	strlcpy(void);
+void	strlcpy_test(void);
 void	strlcat_test(void);
 void	toupper_test(void);
 void	tolower_test(void);

@@ -58,6 +58,7 @@ endif
 #===============================================================================: Executable run command
 run: all
 	@./$(NAME) $(RUN_ARGS)
+	@$(RM) normcheck.txt
 
 #===============================================================================: Build messages
 message:
@@ -70,7 +71,6 @@ libft:
 #===============================================================================: Norminette check
 norm:
 	@-norminette ../libft >> normcheck.txt
-	@printf "$(GREEN)⏳Checking your norm: $(MAGENTA)$(notdir $<)$(GREEN)\r\e[35C[OK]\n$(RESET)"
 
 #===============================================================================: Remove all object files
 clean:
