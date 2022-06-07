@@ -1,4 +1,5 @@
-#include "test42_libft.h"
+// #include "test42_libft.h"
+#include "../include/test42_libft.h"
 
 /**
  * Reads the input and runs the appropriate functions

@@ -2,8 +2,8 @@
 NAME		= 42Test_libft
 
 #===============================================================================: Directory paths
-SRCS_DIRS	= $(addprefix src/, $(dir))
-OBJS_DIRS	= $(addprefix objs/, $(dir))
+# SRCS_DIRS	= $(addprefix src/, $(dir))
+# OBJS_DIRS	= $(addprefix objs/, $(dir))
 
 #===============================================================================: Source to object conversion location
 OBJS		= $(subst src, objs, $(SRCS:.c=.o))
@@ -16,7 +16,7 @@ MAGENTA		= \033[1;35m
 RESET		= \033[0m
 
 #===============================================================================: Include files
-42TLIBFT			= include
+42LIBFT			= include
 LIBFT			= ../libft
 
 #===============================================================================: Compile variables
@@ -25,15 +25,15 @@ CC			= gcc
 MAKEFLAGS	= --no-print-directory
 RM			= rm -rf
 MKDIR		= mkdir -p objs
-HEADERS		= -I $(42TLIBFT)
+HEADERS		= -I $(42LIBFT)
 
 #===============================================================================: Sourcefiles
 SRCS		= $(addprefix src/, $(addsuffix .c, \
-			error \
 			main \
+			filecheck \
+			error \
 			validate \
 			unit_tests \
-			filecheck \
 			run_testing_range))
 
 #===============================================================================: Make commands
@@ -72,7 +72,6 @@ libft:
 clean:
 	@$(RM) objs/
 	@$(MAKE) -C $(LIBFT) clean
-	@$(MAKE) -C $(MLX42) clean
 	@printf "$(RED)🧹Removed objects for \"$(NAME)\"!$(RESET)\n"
 
 #===============================================================================: Remove project object files & executable
@@ -86,7 +85,6 @@ fclean:
 	@$(RM) objs/
 	@$(RM) $(NAME)
 	@$(MAKE) -C $(LIBFT) fclean
-	@$(MAKE) -C $(MLX42) fclean
 	@printf "$(RED)🧹Removed objects for \"$(NAME)\"!$(RESET)\n"
 	@printf "$(RED)🧹Removed \"$(NAME)\"!$(RESET)\n"
 
